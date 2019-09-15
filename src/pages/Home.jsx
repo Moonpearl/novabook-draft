@@ -24,7 +24,9 @@ const Page = styled.div`
 
 const Wrapper = styled.div`
   max-width: 1024px;
-  margin: 4em auto 0;
+  margin: 0 auto;
+  padding: 4em 0 0;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   /* justify-content: center; */
