@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Animated } from 'react-animated-css';
 
@@ -137,6 +138,7 @@ class HomePage extends Component {
         </Animated>
         <ButtonBar>
         { BUTTONS.map ( (button, index) =>
+            <Link to="/discover">
             <Animated animationIn="fadeInUp" animationInDelay={delay(2 + index)}>
               <Button
                 onMouseEnter={this.setHoveredButton(index)}
@@ -147,6 +149,7 @@ class HomePage extends Component {
                 {button.caption}
               </Button>
             </Animated>
+            </Link>
           )}
         </ButtonBar>
         <Animated animationIn="bounceIn" animationInDuration={500} animationOutDuration={0}
